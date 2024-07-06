@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { database } from '../../firebase/firebase';
-import { ref, onValue, remove, update  } from 'firebase/database';
+import { ref, onValue, remove  } from 'firebase/database';
 const QuizList = () => {
   const [quizzes, setQuizzes] = useState([]);
 

@@ -42,6 +42,7 @@ export function AuthProvider({ children }) {
     } else {
       setCurrentUser(null);
       setUserLoggedIn(false);
+      console.log(setIsGoogleUser)
     }
 
     setLoading(false);

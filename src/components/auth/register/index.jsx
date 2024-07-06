@@ -20,9 +20,12 @@ const Register = () => {
         if(!isRegistering) {
             setIsRegistering(true)
             await doCreateUserWithEmailAndPassword(email, password)
+            .then(() => {
+                navigate('/home')
+            })
         }
     }
-
+console.log(setErrorMessage)
     return (
         <>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
