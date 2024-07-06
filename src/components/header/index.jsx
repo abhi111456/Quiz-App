@@ -31,7 +31,7 @@ const Header = () => {
                             to='/register'
                             className='text-xl text-white bg-sky-500 hover:bg-sky-700 transition-colors duration-300 border-2 border-sky-500 p-2 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50 ml-4'
                         >
-                            Register New Account
+                            Register
                         </Link>
                     </>
                 )}
