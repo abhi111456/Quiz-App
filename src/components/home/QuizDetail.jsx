@@ -58,13 +58,14 @@ const QuizDetail = () => {
       setShowResults(true); 
     }
   };
-
+console.log(navigate);
   const handlePrevQuestion = () => {
     if (currentQuizIndex > 0) {
       setCurrentQuizIndex(currentQuizIndex - 1);
     }
   };
 
+  console.log(navigate);
   const handleNextQuestion = () => {
     if (currentQuizIndex + 1 < quizzes.length) {
       setCurrentQuizIndex(currentQuizIndex + 1);
