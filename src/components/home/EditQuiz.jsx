@@ -1,4 +1,3 @@
-// EditQuiz.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { database } from '../../firebase/firebase';
@@ -6,8 +5,13 @@ import { ref, get, update } from 'firebase/database';
 
 const EditQuiz = () => {
   const { id } = useParams();
-  const history = useNavigate(); // Ensure this line correctly imports useHistory from react-router-dom
-  const [question, setQuestion] = useState({ question: '', options: ['', '', '', ''], correctOption: '' });
+  const navigate = useNavigate(); // Ensure correct import syntax
+
+  const [question, setQuestion] = useState({
+    question: '',
+    options: ['', '', '', ''],
+    correctOption: '',
+  });
 
   useEffect(() => {
     const fetchQuiz = async () => {
@@ -42,7 +46,7 @@ const EditQuiz = () => {
     try {
       await update(quizRef, question);
       alert('Question updated successfully!');
-      history.push(`/quiz/${id}`);
+      navigate(`/quiz/${id}`); // Use navigate for programmatic navigation
     } catch (error) {
       console.error('Error updating document: ', error);
       alert('Error updating question: ' + error.message);
